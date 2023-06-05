@@ -60,7 +60,8 @@ with st.sidebar:
     st.header("Select Level :")
     st.session_state['level'] = st.selectbox(" ",
         ('Form 1', 'Form 2', 'Form 3'))
-       
+    
+    st.write('Note: Currently only available for Form 1 Sejarah and Geography')
     
     # Select which vectordb to used based on subjects and level chosen
     if st.session_state['subject'] == 'Sejarah' and st.session_state['level'] == 'Form 1':
