@@ -55,7 +55,7 @@ with st.sidebar:
     # Radio button to select subject and level
     st.header("Select Subject :")
     st.session_state['subject'] = st.radio(" ",
-        ('Math', 'Science', 'Sejarah', 'Geography', 'English', 'BM'))
+        ('Sejarah', 'Geography','Math', 'Science',  'English', 'BM'))
     
     st.header("Select Level :")
     st.session_state['level'] = st.selectbox(" ",
