@@ -1,0 +1,10 @@
+os
+PyPDF2
+pandas
+matplotlib.pyplot
+openai
+transformers
+langchain
+streamlit
+streamlit_chat
+streamlit_extras
