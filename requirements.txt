@@ -7,3 +7,5 @@ langchain==0.0.150
 streamlit==1.22.0
 streamlit_chat==0.0.2.2
 streamlit_extras==0.2.7
+pix2tex==0.1.2
+Pillow==9.4.0
