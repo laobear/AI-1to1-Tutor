@@ -28,7 +28,7 @@ from PIL import Image
 # cd "C:\Users\Admin\Desktop\Python Projects\AI model"
 # streamlit run main.py
 
-api_key = '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'
+api_key = st.secrets["OPENAI_API_KEY"]
 openai.api_key = api_key
 os.environ["OPENAI_API_KEY"] = api_key
 
