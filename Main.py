@@ -1,30 +1,35 @@
 import os
-import PyPDF2
 import pandas as pd
 import matplotlib.pyplot as plt
 import openai
-from transformers import GPT2TokenizerFast
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+# VECTOR STORES
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
+
+# CHAINS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.chains import ConversationalRetrievalChain, RetrievalQA
 from langchain.memory import ConversationBufferMemory
+
+#TEMPLATE
+from langchain import PromptTemplate, LLMChain
+
+#CALLBACK
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.callbacks import get_openai_callback
 
-from langchain import PromptTemplate, LLMChain
-#from langchain.llms import GPT4All
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-
+#STREAMLIT
 import streamlit as st
 from streamlit_chat import message
 from streamlit_extras.add_vertical_space import add_vertical_space
 
+# OCR TOOLS
 from pix2tex.cli import LatexOCR
 from PIL import Image
 
-# To run the WebUI , type the following in the terminal
+# INTRODUCTION: To run the WebUI , type the following in the terminal
 # cd "C:\Users\Admin\Desktop\Python Projects\AI model"
 # streamlit run main.py
 
@@ -37,6 +42,21 @@ GeoF1db = FAISS.load_local("Embeddings/Secondary/Geography", embeddings, index_n
 SejF1db = FAISS.load_local("Embeddings/Secondary/Sejarah", embeddings, index_name="SejarahF1")
 
 from streamlit_extras.app_logo import add_logo
+
+# REMOVE FOOTER AND HAMBURGER
+st.markdown("""
+<style>
+.css-erpbzb.edgvbvh3
+{
+    visibility:hidden;
+}
+
+.css-cio0dv.egzxvld1
+{
+    visibility:hidden;
+}
+</style>
+""", unsafe_allow_html=True)
 
 #sidebar
 with st.sidebar:
