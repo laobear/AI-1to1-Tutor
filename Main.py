@@ -55,6 +55,10 @@ st.markdown("""
 {
     visibility:hidden;
 }
+.viewerBadge_link__1S137
+{
+    visibility:hidden;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -99,8 +103,8 @@ with st.sidebar:
     # st.write("Current subject " + subject)
 
     # Copyright
-    add_vertical_space(5)
-    st.write('Made by Titan Math')
+    # add_vertical_space(5)
+    # st.write('Made by Titan Math')
 
 def main():
     st.header("Your Personal AI Tutor 🤖")
