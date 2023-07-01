@@ -1,0 +1,5 @@
+[client]
+caching = true
+
+[theme]
+base = "dark"
